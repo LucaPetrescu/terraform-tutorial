@@ -26,4 +26,5 @@ module "ec2_compute" {
   source = "./modules/compute"
 
   instance_type_2 = "t2.micro"
+  ami_id          = data.aws_ami.ubuntu.id
 }
