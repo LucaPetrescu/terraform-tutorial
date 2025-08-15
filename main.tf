@@ -23,6 +23,7 @@ resource "aws_instance" "app_server" {
 }
 
 module "ec2_compute" {
-  source        = "./modules/compute"
-  instance_type = var.instance_type
+  source = "./modules/compute"
+
+  instance_type = "t2.micro"
 }
