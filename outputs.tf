@@ -10,5 +10,6 @@ output "instance_type" {
 
 output "instance_id" {
   description = "The description of the AWS instance"
-  value       = module.ec2_compute.instance_id_2
+
+  value = module.ec2_compute.instance_id_2
 }

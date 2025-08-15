@@ -1,4 +1,4 @@
-variable "instance_type_2" {
+variable "instance_type" {
   description = "Instance type for resources"
   type        = string
 }

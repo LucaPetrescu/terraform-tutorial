@@ -1,8 +1,18 @@
-resource "aws_instance" "app_server_2" {
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  owners      = ["099720109477"] # Canonical
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+}
+
+resource "aws_instance" "my_seconds_vm" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = var.instance_type_2
+  instance_type = var.instance_type
 
   tags = {
-    Name = "terraform-tutorial-instance-2"
+    Name = "terraform-tutorial-instance_2"
   }
 }

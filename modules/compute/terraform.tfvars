@@ -1,1 +1,1 @@
-instance_type_2 = "t2.micro"
+instance_type = "t2.micro"
